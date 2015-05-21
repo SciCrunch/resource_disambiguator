@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+             xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+
+    <persistence-unit name="mainJpaUnit"
+                      transaction-type="RESOURCE_LOCAL">
+
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>org.neuinfo.resource.disambiguator.model.Registry</class>
+        <class>org.neuinfo.resource.disambiguator.model.URLRec</class>
+        <class>org.neuinfo.resource.disambiguator.model.Paper</class>
+        <class>org.neuinfo.resource.disambiguator.model.PaperReference</class>
+        <class>org.neuinfo.resource.disambiguator.model.Publisher</class>
+        <class>org.neuinfo.resource.disambiguator.model.ResourceStatus</class>
+        <class>org.neuinfo.resource.disambiguator.model.ValidationStatus</class>
+        <class>org.neuinfo.resource.disambiguator.model.ResourceCandidate</class>
+        <class>org.neuinfo.resource.disambiguator.model.URLRedirectRec</class>
+        <class>org.neuinfo.resource.disambiguator.model.PublisherQueryLog</class>
+        <class>org.neuinfo.resource.disambiguator.model.URLAnnotationInfo</class>
+        <class>org.neuinfo.resource.disambiguator.model.User</class>
+        <class>org.neuinfo.resource.disambiguator.model.RegistryUpdateStatus</class>
+        <class>org.neuinfo.resource.disambiguator.model.JobLog</class>
+        <class>org.neuinfo.resource.disambiguator.model.ResourceRec</class>
+        <class>org.neuinfo.resource.disambiguator.model.RegistrySiteContent</class>
+        <class>org.neuinfo.resource.disambiguator.model.PaperPath</class>
+        <class>org.neuinfo.resource.disambiguator.model.NERPaperPath</class>
+        <class>org.neuinfo.resource.disambiguator.model.NERAnnotationInfo</class>
+        <class>org.neuinfo.resource.disambiguator.model.PubSearchAnnotationInfo</class>
+        <class>org.neuinfo.resource.disambiguator.model.CombinedResourceRef</class>
+        <class>org.neuinfo.resource.disambiguator.model.UrlStatus</class>
+        <class>org.neuinfo.resource.disambiguator.model.CheckPoint</class>
+        <class>org.neuinfo.resource.disambiguator.model.RegistryRedirectAnnotInfo</class>
+        <class>org.neuinfo.resource.disambiguator.model.RedirectHistory</class>
+        <class>org.neuinfo.resource.disambiguator.model.DownSiteStatus</class>
+        <class>org.neuinfo.resource.disambiguator.model.PaperAcronyms</class>
+        <class>org.neuinfo.resource.disambiguator.model.AcronymPaperPath</class>
+        <class>org.neuinfo.resource.disambiguator.model.ParsedPaperSentence</class>
+        <class>org.neuinfo.resource.disambiguator.model.Acronym</class>
+        <class>org.neuinfo.resource.disambiguator.model.AcronymExpansion</class>
+        <exclude-unlisted-classes/>
+
+        <properties>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.url"
+                      value="jdbc:postgresql://localhost:5432/rd_prod"/>
+            <property name="hibernate.connection.username" value="rd_prod"/>
+            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
+            <property name="hibernate.c3p0.min_size" value="4"/>
+            <property name="hibernate.c3p0.max_size" value="10"/>
+            <property name="hibernate.c3p0.timeout" value="86400"/>
+            <property name="hibernate.c3p0.max_statements" value="50"/>
+            <property name="hibernate.c3p0.idle_test_period" value="150"/>
+            <property name="hibernate.c3p0.validate" value="true"/>
+            <!--   <property name="hbm2ddl.auto" value="update"/>  -->
+        </properties>
+
+    </persistence-unit>
+
+</persistence>

@@ -1,0 +1,12 @@
+on production
+-------------
+resource_disambiguator.properties
+
+check registry sites every week
+===============================
+cp resource-disambiguator-prod.jar /usr/local/bin/
+cp /home/bozyurt/registry_site_validator.sh /usr/local/bin/
+
+
+0 0 * * 4 /usr/local/bin/registry_site_validator.sh &> /var/log/registry_site_validator.log # every thursday night
+

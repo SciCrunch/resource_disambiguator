@@ -1,0 +1,14 @@
+<c3p0-config>
+  <default-config>
+    <property name="preferredTestQuery">select 1 as con_test</property>
+    <property name="checkoutTimeout">300</property>
+    <property name="idleConnectionTestPeriod">30</property>
+    <property name="initialPoolSize">10</property>
+    <property name="maxIdleTime">30</property>
+    <property name="maxPoolSize">10</property>
+    <property name="minPoolSize">4</property>
+    <property name="maxStatements">50</property>
+    <property name="minEvictableIdleTimeMillis">60000</property>
+    <property name="timeBetweenEvictionRunsMillis">60000</property>
+  </default-config>
+</c3p0-config>
