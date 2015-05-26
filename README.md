@@ -40,12 +40,23 @@ Building
 
 First install dependencies to your local maven repository. This is a one time thing.
 
-   cd $HOME/resource_disambiguator/dependencies
-   ./install_bnlp_2mvn.sh
-   ./install_bnlp_model2mvn.sh
-   ./install_bnlp_dependencies_2mvn.sh
-   ./install_other_dependencies_2mvn.sh
+    cd $HOME/resource_disambiguator/dependencies
+    ./install_bnlp_2mvn.sh
+    ./install_bnlp_model2mvn.sh
+    ./install_bnlp_dependencies_2mvn.sh
+    ./install_other_dependencies_2mvn.sh
 
-Then 
+Then, edit `$HOME/resource_disambiguator/src/main/resources/dev/META-INF/persistence.xml` and `$HOME/resource_disambiguator/src/main/resources/prod/META-INF/persistence.xml` for development and production profiles to set the database information
 
+```xml
+<property name="hibernate.connection.url"
+   value="jdbc:postgresql://localhost:5432/rd_prod" />
+<property name="hibernate.connection.username" value="rd_prod" />
+<property name="hibernate.connection.password" value="YOUR_PASSWORD" />
+```
+
+Now you are ready to build
+
+    cd $HOME/resource_disambiguator
+    mvn -Pprod clean install assembly:single
 
