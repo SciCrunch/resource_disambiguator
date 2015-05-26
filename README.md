@@ -59,4 +59,11 @@ Now you are ready to build
 
     cd $HOME/resource_disambiguator
     mvn -Pprod clean install assembly:single
+    cp target/resource-disambiguator-prod.jar $HOME
+
+The scripts in the `$HOME/resource_disambiguator/bin` directory are for monthly batch processing. They by default expect `resource-disambiguator-prod.jar` file in the $HOME directory. The driver script is `rd_montly.sh`. 
+
+Before you do any batch processing, you need to populate the `registry` table in the database with resources you want to track mentions for.
+
+
 
