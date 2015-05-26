@@ -2,7 +2,7 @@
 
 echo "rd_monthly task"
 echo "date is `date`"
-now=$(date +'%Tr');
+now=$(date +'%T');
 echo "starting processing at $now"
 
 mon=$(date '+%m');
@@ -11,7 +11,7 @@ year=$(date '+%y');
 batchId=20$year$mon
 echo "batchId:$batchId"
 
-./registry_sync.sh
+#./registry_sync.sh
 
 ./download_pmc.sh -d $batchId
 
