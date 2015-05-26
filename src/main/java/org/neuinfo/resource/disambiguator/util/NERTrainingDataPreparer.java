@@ -13,7 +13,7 @@ import org.jdom.Comment;
 import org.neuinfo.resource.disambiguator.persist.JPAInitializer;
 import org.neuinfo.resource.disambiguator.persist.RDPersistModule;
 import org.neuinfo.resource.disambiguator.persist.bindings.IndicatesPrimaryJpa;
-import org.neuinfo.resource.disambiguator.util.summary.DocPreprocessor;
+import org.neuinfo.resource.disambiguator.util.DocPreprocessor;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
