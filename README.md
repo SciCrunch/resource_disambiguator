@@ -6,7 +6,8 @@ Prerequisites
  * Java 1.6+
  * Maven 3+
  * Postgres 8+
-
+ * SVMLight (http://svmlight.joachims.org/) (`svm_learn` and `svm_classify` executables must be in the path)
+ 
 Getting the code
 ----------------
 
