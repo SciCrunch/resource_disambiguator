@@ -173,10 +173,17 @@
         <version>${hibernate.version}</version>
         <type>jar</type>
      </dependency>
+     <!--
      <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-validator</artifactId>
         <version>4.2.0.Final</version>
+     </dependency>
+      -->
+     <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>5.1.0.Final</version>
      </dependency>
      <dependency>
         <groupId>org.hibernate</groupId>
@@ -323,7 +330,7 @@
   <dependency>
      <groupId>commons-cli</groupId>
      <artifactId>commons-cli</artifactId>
-     <version>1.3-SNAPSHOT</version>
+     <version>1.3.1</version>
   </dependency>
 
   <dependency>
