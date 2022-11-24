@@ -12,7 +12,7 @@
      <maven.compiler.source>1.6</maven.compiler.source>
      <maven.compiler.target>1.6</maven.compiler.target>
      <guice.version>3.0</guice.version>
-     <hibernate.version>4.1.7.Final</hibernate.version>
+     <hibernate.version>5.3.20.Final</hibernate.version>
      <skipTests>true</skipTests>
   </properties>
 
